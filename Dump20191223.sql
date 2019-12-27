@@ -35,7 +35,7 @@ CREATE TABLE `laptop` (
   PRIMARY KEY (`code`),
   KEY `fk_model_product_idx` (`model`),
   CONSTRAINT `fk_laptop_model_product_model` FOREIGN KEY (`model`) REFERENCES `product` (`model`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +65,7 @@ CREATE TABLE `pc` (
   PRIMARY KEY (`code`),
   KEY `fk_model_product_idx` (`model`),
   CONSTRAINT `fk_model_product` FOREIGN KEY (`model`) REFERENCES `product` (`model`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,7 +94,7 @@ CREATE TABLE `printer` (
   PRIMARY KEY (`code`),
   KEY `fk_printer_model_product_model_idx` (`model`),
   CONSTRAINT `fk_printer_model_product_model` FOREIGN KEY (`model`) REFERENCES `product` (`model`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -118,7 +118,7 @@ CREATE TABLE `product` (
   `model` varchar(50) NOT NULL,
   `type` varchar(50) NOT NULL,
   PRIMARY KEY (`model`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
